@@ -1,0 +1,480 @@
+/* =========================================
+   MEENU STORE - COMMON PROFESSIONAL CSS
+   ========================================= */
+
+:root {
+    --navy: #182338;
+    --navy-light: #293956;
+    --gold: #c6a15b;
+    --gold-light: #e7d3a8;
+    --cream: #f8f5ef;
+    --white: #ffffff;
+    --text: #252525;
+    --muted: #6d6d6d;
+    --border: #e4ddd1;
+    --shadow: 0 8px 25px rgba(24, 35, 56, 0.10);
+    --shadow-hover: 0 15px 35px rgba(24, 35, 56, 0.18);
+}
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px 25px;
+    border-bottom: 4px solid var(--gold);
+}
+
+header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: var(--gold-light);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+nav {
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 21px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+nav a.active {
+    background: var(--gold);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(198, 161, 91, 0.3);
+}
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+main {
+    width: 92%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+/* =========================================
+   INDEX / WELCOME SECTION
+   ========================================= */
+
+.hero {
+    background: var(--white);
+    border-radius: 18px;
+    min-height: 430px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    margin-bottom: 45px;
+}
+
+.hero-content {
+    padding: 65px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h2 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero-content h2 span {
+    color: var(--gold);
+}
+
+.hero-content p {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 520px;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.collection-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.collection-heading h2 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.collection-heading h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: var(--gold);
+    margin: 12px auto;
+    border-radius: 5px;
+}
+
+.collection-heading p {
+    color: var(--muted);
+    max-width: 700px;
+    margin: auto;
+}
+
+/* =========================================
+   COLLECTION GRID
+   ========================================= */
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.collection-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--gold-light);
+}
+
+.collection-card img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    display: block;
+}
+
+.collection-card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.collection-card-content h3 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.collection-card-content p {
+    color: var(--muted);
+    font-size: 14px;
+    min-height: 68px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   PRODUCT SUBPAGES
+   WATCH / PHONE / WALLET / PURSE
+   ========================================= */
+
+.product-page {
+    width: 92%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+/* Main product box */
+
+.product-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Image area */
+
+.product-image-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #f1eee8;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Product information */
+
+.product-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 5px;
+}
+
+.product-info h2 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+    overflow-wrap: break-word;
+}
+
+.product-info .product-tagline {
+    color: var(--gold);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.product-info p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 12px;
+    overflow-wrap: break-word;
+}
+
+.product-info h3 {
+    color: var(--navy);
+    font-size: 19px;
+    margin-top: 18px;
+    margin-bottom: 7px;
+}
+
+.product-info ul {
+    padding-left: 20px;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.product-info li {
+    margin-bottom: 5px;
+}
+
+/* =========================================
+   BACK BUTTON
+   ========================================= */
+
+.back-section {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 23px 15px;
+    margin-top: 60px;
+    border-top: 3px solid var(--gold);
+}
+
+footer p {
+    color: #dddddd;
+    font-size: 14px;
+}
+
+/* =========================================
+   MOBILE / TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        min-height: 350px;
+        height: 350px;
+    }
+
+    .product-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image-container {
+        height: 450px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 13px;
+    }
+
+    main,
+    .product-page {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .hero-content {
+        padding: 40px 25px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .collection-heading h2 {
+        font-size: 27px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-card img {
+        height: 280px;
+    }
+
+    .product-layout {
+        padding: 18px;
+        gap: 25px;
+    }
+
+    .product-image-container {
+        height: 330px;
+    }
+
+    .product-info h2 {
+        font-size: 27px;
+    }
+}
